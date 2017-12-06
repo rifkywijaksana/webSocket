@@ -4,7 +4,7 @@
 
 	$dbtype = "mysql";								// mysql or pgsql
 	$dbhost = "127.0.0.1";							// database server
-	$dbname = "test";							// database name
+	$dbname = "log_ecu";							// database name
 	$dbuser = "root";								// database user
 	$dbpassword = "";					// database password 
 	$dbcharset = "utf8";								// database charset
@@ -22,6 +22,6 @@
 	}
 
 	$data->event->attach("OnDBError", doOnDBError);
-	$data->render_table("alamat", "id", "nama,alamat");
+	$data->render_table("tb_sensor", "id_sensor", "temperatur,rpm,pengapian,tps,02_sensor,volt_battere,kd_kesalahan");
 
 ?>
